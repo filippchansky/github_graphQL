@@ -4,10 +4,10 @@ import Button from "../UI/Btn/Button";
 import Input from "../UI/Input/Input";
 import "./header.css";
 
-const Header = ({searchText, setSearchText, newText}) => {
+const Header = ({searchText, setSearchText, searchQuery}) => {
     
-    
-   
+
+  
 
   return (
     <header className="header">
@@ -15,9 +15,9 @@ const Header = ({searchText, setSearchText, newText}) => {
         <Input
           placeholder="Search"
           value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
+          onChange = {(e) => setSearchText(e.target.value)}
         />
-        <Button>Поиск</Button>
+        <Button onClick = {searchQuery}>Поиск</Button>
       </div>
     </header>
   );

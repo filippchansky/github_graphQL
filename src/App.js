@@ -6,13 +6,12 @@ import axios from "axios";
 
 function App() {
   const url = "https://api.github.com/graphql";
-  const token = "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";
+  const token = "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";
   const [searchText, setSearchText] = useState('');
   const [repository, setRepository] = useState([]);
-
- 
-
-  useEffect(() => {
+  let newText = ''
+  function searchQuery () {
+    newText = searchText //вставить в запрос
     axios({
       url: url,
       method: "POST",
@@ -22,7 +21,7 @@ function App() {
       },
       data: {
         query: `query {
-          search(query: "${searchText}", type: REPOSITORY, first: 100) {
+          search(query: "ocreact", type: REPOSITORY, first: 100) { 
             nodes {
               ... on Repository {
                 id
@@ -42,12 +41,14 @@ function App() {
         }`,
       },
     }).then((res) => setRepository(res.data.data.search.nodes));
-  }, []);
+    console.log('working')
+  }
   
-  console.log(searchText)
+  
+  
 
   return <div className="App">
-    <Header searchText = {searchText} setSearchText = {setSearchText}/>
+    <Header searchQuery = {searchQuery} newText = {newText} searchText = {searchText} setSearchText = {setSearchText}/>
     <Posts posts = {repository}/>
   </div>;
 }
