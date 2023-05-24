@@ -44,7 +44,7 @@ function App() {
     }).then((res) => setRepository(res.data.data.search.nodes));
   }, []);
   
-  console.log(searchText)
+  
 
   return <div className="App">
     <Header searchText = {searchText} setSearchText = {setSearchText}/>
