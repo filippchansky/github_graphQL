@@ -1,0 +1,39 @@
+.post__item {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.post__header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.post__body {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.post__body a {
+    color: black;
+}
+
+.post__body a:hover {
+    border-bottom: 1px solid black;
+}
+
+.github-avatar {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.post__footer {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+}

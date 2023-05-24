@@ -1,0 +1,12 @@
+.button-default {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all .5s;
+}
+
+.button-default:hover {
+    background-color: black;
+    color: white;
+}
