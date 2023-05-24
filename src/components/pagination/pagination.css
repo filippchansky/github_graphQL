@@ -1,0 +1,22 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination-item {
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.pagination-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.pagination-item.active {
+    background-color: black;
+    color: white;
+}
