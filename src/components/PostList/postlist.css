@@ -5,4 +5,10 @@
 }
 
 .post__info {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.post__info p:hover {
+    border-bottom: 1px solid black;
 }

@@ -18,7 +18,7 @@ const Repository = ({post}) => {
         <p>
           Владелец:{" "}
           <strong>
-            <a href={post.owner.url}>{post.owner.login}</a>
+            <a  href={post.owner.url}>{post.owner.login}</a>
           </strong>
         </p>
         <img className="github-avatar" src={post.owner.avatarUrl} alt="" />

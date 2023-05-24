@@ -10,10 +10,9 @@ const PostList = ({ post}) => {
   
   return (
     <div className="post__item">
-      <div className="post__info">
+      <div className="post__info" onClick = {()=> setModalPost(!modalPost)}>
         <p>
           Название: <strong>{post.name}</strong>
-          <Button onClick = {()=> setModalPost(!modalPost)}>Подробнее</Button>
         </p>
       </div>
       <ModalWindow active = {modalPost} setActive = {setModalPost}><Repository post = {post}/></ModalWindow>
