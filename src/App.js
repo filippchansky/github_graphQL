@@ -7,7 +7,7 @@ import Pagination from "./components/pagination/Pagination";
 
 function App() {
   const url = "https://api.github.com/graphql";
-  const token = "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";
+  const token = "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"; // ваш токен
   const [searchText, setSearchText] = useState(
     JSON.parse(localStorage.getItem("text")) || ""
   );
